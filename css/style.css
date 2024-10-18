@@ -1,0 +1,23 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+.header-text{
+    text-align: center;
+    font-family: “Big Caslon”, “Book Antiqua”, “Palatino Linotype”, Georgia, serif;
+}
+
+.header-background{
+    width:100%;
+    display:flex;
+    flex-direction: wrap;
+    flex-wrap: wrap;
+    
+}
+
+.header-background img {
+    width:100%;
+    display:flex;
+
+}
