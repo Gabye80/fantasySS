@@ -4,16 +4,15 @@ function hideStormlight() {
   var y = document.getElementById("mistborn-series");
   var z = document.getElementById("elantris-series");
   if (x.style.display === "block") {
-    selector.scrollIntoView({behavior: "smooth"});
+    selector.scrollIntoView({ behavior: "smooth" });
     setTimeout(() => {
       x.style.display = "none";
-    }, 750)
-
+    }, 750);
   } else {
     x.style.display = "block";
     y.style.display = "none";
     z.style.display = "none";
-    x.scrollIntoView({behavior: "smooth"});
+    x.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -24,16 +23,15 @@ function hideMistborn() {
   var y = document.getElementById("mistborn-series");
   var z = document.getElementById("elantris-series");
   if (y.style.display === "block") {
-    selector.scrollIntoView({behavior: "smooth"});
+    selector.scrollIntoView({ behavior: "smooth" });
     setTimeout(() => {
       y.style.display = "none";
-    }, 750)
-
+    }, 750);
   } else {
     x.style.display = "none";
     y.style.display = "block";
     z.style.display = "none";
-    y.scrollIntoView({behavior: "smooth"});
+    y.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -43,16 +41,15 @@ function hideElantris() {
   var y = document.getElementById("mistborn-series");
   var z = document.getElementById("elantris-series");
   if (z.style.display === "block") {
-    selector.scrollIntoView({behavior: "smooth"});
+    selector.scrollIntoView({ behavior: "smooth" });
     setTimeout(() => {
       z.style.display = "none";
-    }, 750)
-
+    }, 750);
   } else {
     x.style.display = "none";
     y.style.display = "none";
     z.style.display = "block";
-    z.scrollIntoView({behavior: "smooth"});
+    z.scrollIntoView({ behavior: "smooth" });
   }
 }
 
