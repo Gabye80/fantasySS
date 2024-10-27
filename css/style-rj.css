@@ -1,0 +1,36 @@
+
+.wot-selector :hover{
+    cursor: pointer;
+  
+}
+  .wot-selector img {
+    border: #000000;
+    border-style: outset;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+  .wot-selector:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.wot-selector{
+  display:flex;
+  justify-content: center;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+.wot-selector img{
+  max-width: 400px; 
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}

@@ -1,23 +1,185 @@
 <!DOCTYPE html>
 
+<!-- PROJECT BASED *SLIGHTLY* ON THIS PAGE https://dribbble.com/shots/24003762-Portfolio-Animation  -->
+
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FantasySS</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FantasySS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="css/style.css" />
-</head> 
+  <body>
+    <ul class="header">
+      <li class="header-button-who-we-are">
+        <button type="button">About Us</button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247m2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+        </svg>
+      </li>
 
-<body>
+      <li class="header-button-authors">
+        <button type="button" onclick="location.href='robertjordan.html';">Swap Author</button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
+        </svg>
+      </li>
 
-  <div class="header-background">
-    <img src="img/wayofkings-cover.jpg" alt="Way of Kings cover">
-    <h1 class="header-text">FantasySS</h1>
+      <li class="header-button-weekly-book">
+        <button type="button" onclick="location.href='weeklybook.html';">Weekly Book</button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
+          <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z"/>
+          <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+        </svg>
+      </li>
+    </ul>
+
+    <div class="header-logo">
+      <img src="img/fantasyss-logo1.png" alt="FantasySS Logo">
+    </div>
+
+    <div class="author-space">
+      <div class="author-title">
+        <p>Brandon Sanderson</p>
+      </div>
+      <div class="author-body">
+        <div class="author-portrait">
+          <img src="img/b-money.jpg" alt="Brandon Sanderson's Portrait" />
+        </div>
+        <div class="author-description">
+          <p>
+            Brandon Winn Sanderson (born December 19, 1975) is an American author of high fantasy, science fiction, and young adult books. He is best known for the Cosmere fictional universe, in which most of his fantasy novels, most notably the Mistborn series and The Stormlight Archive, are set. Outside of the Cosmere, he has written several young adult and juvenile series including The Reckoners, the Skyward series,[a] and the Alcatraz series. He is also known for finishing Robert Jordan's high fantasy series The Wheel of Time. Sanderson has created several graphic novel fantasy series, including White Sand and Dark One.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-selector" id="selector">
+      <p>Author's Work</p>
+    </div>
+<div class="series-selector">
+
+  <div class="stormlight-selector">
+    <img src="img/wok-cover.jpg" alt="Stormlight Archive" onclick="hideStormlight()">
+  </div>
+  <div class="mistborn-selector">
+    <img src="img/mistborn-cover.jpg" alt="Mistborn" onclick="hideMistborn()">
+  </div>
+  <div class="elantris-selector">
+    <img src="img/elantris-cover.jpg" alt="Elantris" onclick="hideElantris()">
+  </div>
+
+</div>
+
+<div class="series-stormlight" id="sa-series">
+ <!-- STORMLIGHT ARCHIVE -->
+    <div class="series-space">
+      <div class="series-title">
+        <p>The Stormlight Archive</p>
+      </div>
+      <div class="series-body">
+        
+        <div class="series-description">
+          <p>
+            The Stormlight Archive is a high fantasy novel series written by American author Brandon Sanderson, planned to consist of ten novels. As of 2023, the series comprises four published novels and two novellas, set within his broader Cosmere universe. The first novel, The Way of Kings, was published on August 31, 2010. The second novel, Words of Radiance, was published in 2014 and debuted at number one on The New York Times Best Seller List, followed by Oathbringer in 2017 and Rhythm of War in 2020. A fifth novel, named Wind and Truth, is expected to be released December 6, 2024, while writing for the latter half of the series will begin after Sanderson finishes writing the upcoming Era Three Mistborn trilogy and the two Elantris sequels
+          </p>
+        </div>
+
+        <div class="series-image">
+          <img src="img/wok-cover.jpg" alt="Stormlight Archive First Book"/>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 
-</body>
 
+  <div class="series-mistborn" id="mistborn-series">
+ <!-- MISTBORN -->
+    <div class="series-space">
+      <div class="series-title">
+        <p>MISTBORN</p>
+      </div>
+      <div class="series-body">
+      
+        <div class="series-description">
+          <p>
+            Mistborn is a series of epic fantasy novels written by American author Brandon Sanderson and published by Tor Books. The first trilogy, published between 2006 and 2008, consists of The Final Empire, The Well of Ascension, and The Hero of Ages. A second series was released between 2011 and 2022, and consists of the quartet The Alloy of Law, Shadows of Self, The Bands of Mourning and The Lost Metal. Sanderson also released a novella in 2016, Mistborn: Secret History. Sanderson plans to write a third and fourth series.
+
+            The first Mistborn trilogy chronicles the efforts of a secret group of Allomancers who attempt to overthrow a dystopian empire and establish themselves in a world covered by ash. The first trilogy was a huge success. This success pushed Sanderson to further develop his fictional universe, the Cosmere, which also includes The Stormlight Archive. Set about 300 years after the ending of the first trilogy, the second series is about the exploits of a character forced to move into the big city, and starts investigating kidnappings and robberies. The third series will be set in the early computer age with 1980s technology. The fourth series is planned to be a space-opera.          </p>
+        </div>
+
+        <div class="series-image">
+          <img src="img/mistborn-cover.jpg" alt="Mistborn Series First Book" />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="series-elantris" id="elantris-series">
+ <!-- ELANTRIS -->
+    <div class="series-space">
+      <div class="series-title">
+        <p>ELANTRIS</p>
+      </div>
+      <div class="series-body">
+      
+        <div class="series-description">
+          <p>
+            Elantris is a fantasy novel written by American fantasy and science fiction writer Brandon Sanderson. The book was published on April 21, 2005, by Tor Books and was Sanderson's first published book. The book gained generally positive reviews, and has been translated into multiple languages. Two related works, Hope of Elantris and The Emperor's Soul, have been released, and two additional novels in the series have been announced.
+
+The story follows three main characters: Prince Raoden of Arelon, Princess Sarene of Teod, and the priest Hrathen of Fjorden. At the beginning of the story, Raoden is cursed by an ancient transformation known as the Shaod and secretly exiled to the city of Elantris just days before his betrothed, princess Sarene of Teod, arrives for their wedding. As Raoden tries to avoid gangs, keep his sanity, and unite the people of Elantris, Sarene must cope with the loss of her husband-to-be and try to save Arelon from Hrathen, a priest tasked with converting all of Arelon to the religion of Fjorden or dooming it to destruction.
+          </p>        
+        </div>
+
+        <div class="series-image">
+          <img src="img/elantris-cover.jpg" alt="Elantris First Book" />
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+<!-- Cannot add a good looking Carousel without using Bootstrap or frameworks, will leave it for the next prototype xD
+<div class="author-books-carousel"> </div> -->
+
+
+<div class="footer">
+
+  <div class="form-popup" id="contactForm">
+    <form action="/action_page.php" class="form-container">
+
+      <h1>Don't contact us please</h1>
+      <button type="button" class="btn cancel" onclick="closeContact()">Close</button>
+    </form>
+  </div>
+
+  <div class="form-popup" id="newsletterForm">
+    <form action="/action_page.php" class="form-container">
+      <label><b>Sign up to our Newsletter!</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+  
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn cancel" onclick="closeNewsletter()">Close</button>
+    </form>
+  </div>
+
+
+  <p class="contact-us" id="contact" onclick="openContact()"> Contact us!</p>
+  <p class="news-letter" id="newsletter" onclick="openNewsletter()"> Sign up to our newsletter!</p>
+  <p> Copyright 2024 @Gabye80</p>
+</div> 
+
+  </body>
 </html>

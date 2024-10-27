@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<!-- PROJECT BASED *SLIGHTLY* ON THIS PAGE https://dribbble.com/shots/24003762-Portfolio-Animation  -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FantasySS</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-wb.css">
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <ul class="header">
+      <li class="header-button-who-we-are">
+        <button type="button">About Us</button>
+      </li>
+
+      <li class="header-button-authors">
+        <button type="button" onclick="location.href='robertjordan.html';">Swap Author</button>
+      </li>
+
+      <li class="header-button-weekly-book">
+        <button type="button" onclick="location.href='weeklybook.html';">Weekly Book</button>
+      </li>
+    </ul>
+
+    <div class="header-logo">
+      <img src="img/fantasyss-logo1.png" alt="FantasySS Logo">
+    </div>
+
+    <div class="book-space">
+      <div class="book-title">
+        <p>Weekly Book Recommendation</p>
+      </div>
+      <div class="book-body">
+        <div class="book-portrait">
+          <img src="img/name-of-the-wind-cover.jpg" alt="Weekly Book Cover" />
+        </div>
+        <div class="book-description">
+          <p>
+            Told in Kvothe's own voice, this is the tale of the magically gifted young man who grows to be the most notorious wizard his world has ever seen.
+
+The intimate narrative of his childhood in a troupe of traveling players, his years spent as a near-feral orphan in a crime-ridden city, his daringly brazen yet successful bid to enter a legendary school of magic, and his life as a fugitive after the murder of a king form a gripping coming-of-age story unrivaled in recent literature.
+
+            The Name of the Wind is long, it's a teenage boy fantasy and it's protagonist is capable hero. Those points are its greatest strengths and its weakest links. Whether or not you are a fan of fantasy, this series is one of the most engaging, perfectly crafted character studies I have ever read. Even if you think these points make it weak, it is still worth reading for the simple act of examination. But without any work on your part, Patrick Rothfuss will thrust you deep into a world that is new, fresh, and above all, fantastic.          
+          
+          In short, if you love a good fantasy book, you have nothing to lose on this read!
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+
+      <div class="form-popup" id="contactForm">
+        <form action="/action_page.php" class="form-container">
+    
+          <h1>Don't contact us please</h1>
+          <button type="button" class="btn cancel" onclick="closeContact()">Close</button>
+        </form>
+      </div>
+    
+      <div class="form-popup" id="newsletterForm">
+        <form action="/action_page.php" class="form-container">
+          <label><b>Sign up to our Newsletter!</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeNewsletter()">Close</button>
+        </form>
+      </div>
+    
+    
+      <p class="contact-us" id="contact" onclick="openContact()"> Contact us!</p>
+      <p class="news-letter" id="newsletter" onclick="openNewsletter()"> Sign up to our newsletter!</p>
+      <p> Copyright 2024 @Gabye80</p>
+    </div> 
+</body>
+
+</html>

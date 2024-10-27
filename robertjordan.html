@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<!-- PROJECT BASED *SLIGHTLY* ON THIS PAGE https://dribbble.com/shots/24003762-Portfolio-Animation  -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FantasySS</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-rj.css">
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="header-button-who-we-are">
+        <button type="button">About Us</button>
+      </div>
+      <div class="header-button-authors">
+        <button type="button" onclick="location.href='index.html';">Swap Author</button>
+        </div>
+        <div class="header-button-weekly-book">
+          <button type="button" onclick="location.href='weeklybook.html';">Weekly Book</button>
+        </div>
+    </div>
+
+    <div class="header-logo">
+      <img src="img/fantasyss-logo1.png" alt="FantasySS Logo">
+    </div>
+
+    <div class="author-space">
+      <div class="author-title">
+        <p>Robert Jordan</p>
+      </div>
+      <div class="author-body">
+        <div class="author-portrait">
+          <img src="img/robert-jordan.jpg" alt="Robert Jordan's Portrait" />
+        </div>
+        <div class="author-description">
+          <p>
+            Brandon Winn Sanderson (born December 19, 1975) is an American author of high fantasy, science fiction, and young adult books. He is best known for the Cosmere fictional universe, in which most of his fantasy novels, most notably the Mistborn series and The Stormlight Archive, are set. Outside of the Cosmere, he has written several young adult and juvenile series including The Reckoners, the Skyward series,[a] and the Alcatraz series. He is also known for finishing Robert Jordan's high fantasy series The Wheel of Time. Sanderson has created several graphic novel fantasy series, including White Sand and Dark One.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="title-selector" id="selector">
+      <p>Author's Titles</p>
+    </div>
+
+    <div class="series-selector">
+      <div class="wot-selector">
+        <img src="img/wheelof-time-1.jpg" alt="The Wheel of TIme">
+      </div>
+    </div>
+
+<div class="series-wheel-of-time" id="wot-series">
+ <!-- THE WHEEL OF TIME -->
+    <div class="series-space">
+      <div class="series-title">
+        <p>The Wheel of Time</p>
+      </div>
+      <div class="series-body">
+      
+        <div class="series-description">
+          <p>
+            The Stormlight Archive is a high fantasy novel series written by American author Brandon Sanderson, planned to consist of ten novels. As of 2023, the series comprises four published novels and two novellas, set within his broader Cosmere universe. The first novel, The Way of Kings, was published on August 31, 2010. The second novel, Words of Radiance, was published in 2014 and debuted at number one on The New York Times Best Seller List, followed by Oathbringer in 2017 and Rhythm of War in 2020. A fifth novel, named Wind and Truth, is expected to be released December 6, 2024, while writing for the latter half of the series will begin after Sanderson finishes writing the upcoming Era Three Mistborn trilogy and the two Elantris sequels
+          </p>
+        </div>
+
+        <div class="series-image">
+          <img src="img/wheelof-time-1.jpg" alt="The Wheel of Time's First Book"/>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+
+    <div class="form-popup" id="contactForm">
+      <form action="/action_page.php" class="form-container">
+  
+        <h1>Don't contact us please</h1>
+        <button type="button" class="btn cancel" onclick="closeContact()">Close</button>
+      </form>
+    </div>
+  
+    <div class="form-popup" id="newsletterForm">
+      <form action="/action_page.php" class="form-container">
+        <label><b>Sign up to our Newsletter!</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+    
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeNewsletter()">Close</button>
+      </form>
+    </div>
+  
+  
+    <p class="contact-us" id="contact" onclick="openContact()"> Contact us!</p>
+    <p class="news-letter" id="newsletter" onclick="openNewsletter()"> Sign up to our newsletter!</p>
+    <p> Copyright 2024 @Gabye80</p>
+  </div> 
+
+  </body>
+</html>

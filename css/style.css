@@ -3,21 +3,628 @@
     padding: 0;
 }
 
-.header-text{
+body {
+    background-image: url("../img/words-of-radiance-cover.jpg");
+    background-size:cover ;
+    background-repeat: no-repeat;
+    position: static;
+  }
+
+.header{
+    background-color: rgba(0, 0, 0, 0.6);
+    mask: linear-gradient(to top, transparent, black 35%);
+    padding-bottom: 40px;
+    padding-top: 20px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    height:100px;
+}
+
+.header-button-who-we-are,
+.header-button-authors,
+.header-button-weekly-book {
+  align-items: center;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-button-who-we-are button,
+.header-button-authors button,
+.header-button-weekly-book button{
+
+  background-color: transparent;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  border: transparent;
+  color:whitesmoke;
+  text-shadow: 0 0 20px black;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.header-button-who-we-are :hover,
+.header-button-authors :hover,
+.header-button-weekly-book :hover{
+  background-color:#ffffff24;
+  box-shadow: 0 0 50px #ffffff42;
+}
+
+.header-logo {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+}
+
+.header-logo img{
+    width:100%;
+}
+
+.author-space{
+    mask: linear-gradient(to bottom, transparent, black 5%);
+    margin-top: 2%;
+    background-color: rgba(0, 0, 0, 0.245);
+    backdrop-filter: blur(5px);
+    margin-bottom: 5%;
+}
+
+.author-title {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    margin-bottom: 2%;
+    color: whitesmoke;
+
+}
+
+.author-title p{
+
+    font-size: 150px;
+    margin-top: 2%;
+    text-shadow: 0px 0px 30px goldenrod;
+    outline: #000000;
+
+}
+
+
+.author-body{
+    display: flex;
+    flex:wrap;
+      
+}
+
+.author-portrait {
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    box-shadow: 0 0 100px #000000;
+
+}
+
+.author-portrait img{
+  min-height:100%;
+} 
+
+.author-description {
+    display:flex;
+    font-size:large;
+    flex:wrap;
+    font-size: 50px;
+    margin-left: 5%;
+    margin-right: 20%;
+    color:whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title-selector {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-evenly;
+  margin-bottom: 3%;
+  color: whitesmoke;
+
+}
+
+.title-selector p{
+  font-size: 150px; 
+  text-shadow: 0px 0px 50px black;
+
+}
+
+.series-selector{
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-bottom:5%;
+
+}
+
+
+.series-stormlight{
+  display: none;
+}
+.series-mistborn{
+  display: none;
+}
+.series-elantris{
+  display: none;
+}
+
+
+.stormlight-selector :hover{
+  cursor: pointer;
+
+}
+.stormlight-selector img {
+  border: #000000;
+  border-style: outset;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.stormlight-selector:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
+.mistborn-selector :hover{
+  cursor: pointer;
+
+}
+.mistborn-selector img {
+  border: #000000;
+  border-style: outset;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.mistborn-selector:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
+.elantris-selector :hover{
+  cursor: pointer;
+
+}
+.elantris-selector img {
+  border: #000000;
+  border-style: outset;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.elantris-selector:hover img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
+
+.series-space{
+  mask: linear-gradient(to bottom, transparent, black 5%);
+  margin-top: 2%;
+  background-color: rgba(0, 0, 0, 0.356);
+  backdrop-filter: blur(5px);
+}
+
+.series-title {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-evenly;
+  margin-bottom: 2%;
+  color: whitesmoke;
+  
+
+}
+
+.series-title p{
+
+  font-size: 80px;
+  margin-top: 2%;
+  text-shadow: 0px 0px 20px black;
+
+}
+
+.series-body{
+  display: flex;
+  justify-content: center;
+}
+
+.series-image {
+  margin-left: 5%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+  align-content: right;
+
+}
+
+.series-image img{
+  max-width: 100%;
+  box-shadow: 0px 0px 50px #000000;
+
+}
+
+.series-description {
+  max-width: 30%;
+  display:flex;
+  font-size: x-large;
+  margin-left: 15%;
+  margin-bottom: 5%;
+  color:whitesmoke;
+  font-family: 'Times New Roman', Times, serif;
+  align-content: left;
+  text-shadow: 0px 0px 10px black;
+}
+
+/* .author-books-carousel{
+
+} */
+
+.footer {
+    display:flex;
+    background-color:rgb(34, 34, 34);
+    padding: 100px;
     text-align: center;
-    font-family: “Big Caslon”, “Book Antiqua”, “Palatino Linotype”, Georgia, serif;
+    color: white;
+    justify-content: space-evenly;
+  }
+
+  .contact-us{
+    cursor: pointer;
+    }
+
+  .news-letter{
+    cursor: pointer;
+    }
+
+    .form-popup {
+      display: none;
+      position: relative;
+      top:30px;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+      font-size: 30px;
+    }
+
+  .footer p{
+    font-size: x-large;
+  }
+
+  .form-popup{
+    background-color:rgb(34, 34, 34);
+    color: whitesmoke;
+    display:none;
+  }
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+*{
+  margin-left: 0%;
+  margin-right: 0%;
 }
 
-.header-background{
-    width:100%;
-    display:flex;
-    flex-direction: wrap;
+body {
+  background: transparent;
+  background-image: url("../img/words-of-radiance-cover-phone.jpg") ;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.author-space {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.author-body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.author-title p{
+  margin-top: 5%;
+  font-size: 50px;
+}
+
+.author-portrait{
+  margin-left: 0%;
+  flex-direction: row;
+  align-content: center;
+  align-self: center;
+}
+
+.author-portrait img{
+  max-height: 250px;
+  align-content: center;
+  align-self: center;
+}
+
+.author-description{
+  flex-wrap: wrap;
+  font-size: 30px;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.title-selector p{ 
+  font-size:50px;
+  margin-bottom: 2%;
+  text-shadow: 0 0 30px black;
+}
+
+.series-selector{
+  margin-left: 2%;
+}
+
+.series-selector img{
+  max-width:90%;
+}
+
+.series-space{
+  display: flex;
+  flex:wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.series-title p{
+  margin-top: 8%;
+  font-size: 50px;
+  text-shadow: 0 0 30px black;
+}
+
+.series-body{
+  display: flex;
+  justify-content: center;
+}
+
+.series-image{
+  display:none
+}
+.series-description{
+  max-width: 100%;
+  flex-wrap: wrap;
+  font-size: 30px;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-bottom: 5%;
+  text-align: center;
+  align-content:center;
+}
+
+
+
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  *{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  
+  body {
+    background: transparent;
+    background-image: url("../img/words-of-radiance-cover-phone.jpg") ;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .author-space {
+    display: flex;
     flex-wrap: wrap;
-    
+    justify-content: space-evenly;
+  }
+  
+  .author-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .author-title p{
+    margin-top: 5%;
+    font-size: 50px;
+  }
+  
+  .author-portrait{
+    margin-left: 0%;
+    flex-direction: row;
+    align-content: center;
+    align-self: center;
+  }
+  
+  .author-portrait img{
+    max-height: 350px;
+    align-content: center;
+    align-self: center;
+  }
+  
+  .author-description{
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+  
+  .title-selector p{ 
+    font-size:50px;
+    margin-bottom: 2%;
+    text-shadow: 0 0 30px black;
+  }
+  
+  .series-selector{
+    margin-left: 2%;
+  }
+  
+  .series-selector img{
+    max-width:90%;
+  }
+  
+  .series-space{
+    display: flex;
+    flex:wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .series-title p{
+    margin-top: 8%;
+    font-size: 50px;
+    text-shadow: 0 0 30px black;
+  }
+  
+  .series-body{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .series-image{
+    display:none
+  }
+  .series-description{
+    max-width: 100%;
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    text-align: center;
+    align-content:center;
+  }
+  
 }
 
-.header-background img {
-    width:100%;
-    display:flex;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+  *{
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  
+  body {
+    background: transparent;
+    background-image: url("../img/words-of-radiance-cover.jpg") ;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .author-space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .author-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .author-title p{
+    margin-top: 5%;
+    font-size: 50px;
+  }
+  
+  .author-portrait{
+    margin-left: 0%;
+    flex-direction: row;
+    align-content: center;
+    align-self: center;
+  }
+  
+  .author-portrait img{
+    max-height: 500px;
+    align-content: center;
+    align-self: center;
+  }
+  
+  .author-description{
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+  
+  .title-selector p{ 
+    font-size:50px;
+    margin-bottom: 2%;
+    text-shadow: 0 0 30px black;
+  }
+  
+  .series-selector{
+    margin-left: 5%;
+  }
+  
+  .series-selector img{
+    max-width:80%;
+  }
+  
+  .series-space{
+    display: flex;
+    flex:wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .series-title p{
+    margin-top: 8%;
+    font-size: 50px;
+    text-shadow: 0 0 30px black;
+  }
+  
+  .series-body{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .series-image{
+    display:none
+  }
+  .series-description{
+    max-width: 100%;
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-bottom: 5%;
+    text-align: center;
+    align-content:center;
+  }
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 
 }

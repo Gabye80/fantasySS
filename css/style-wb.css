@@ -1,0 +1,153 @@
+.book-space{
+    mask: linear-gradient(to bottom, transparent, black 5%);
+    margin-top: 2%;
+    background-color: rgba(0, 0, 0, 0.245);
+    backdrop-filter: blur(5px);
+    margin-bottom: 5%;
+    
+}
+
+.book-title {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-evenly;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    color: whitesmoke;
+
+}
+
+.book-title p{
+  text-align: center;
+    font-size: 150px;
+    margin-top: 2%;
+    text-shadow: 0px 0px 30px goldenrod;
+    outline: #000000;
+
+}
+
+
+.book-body{
+    display: flex;
+    flex:wrap;
+      
+}
+
+.book-portrait {
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    box-shadow: 0 0 100px #000000;
+
+}
+
+.book-portrait img{
+  min-height:100%;
+} 
+
+.book-description {
+    display:flex;
+    font-size:large;
+    flex:wrap;
+    font-size: 50px;
+    margin-left: 5%;
+    margin-right: 20%;
+    color:whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer {
+  display:flex;
+  background-color:rgb(34, 34, 34);
+  padding: 100px;
+  text-align: center;
+  color: white;
+  justify-content: space-evenly;
+}
+
+.contact-us{
+  cursor: pointer;
+  }
+
+.news-letter{
+  cursor: pointer;
+  }
+
+  .form-popup {
+    display: none;
+    position: relative;
+    top:30px;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    font-size: 30px;
+  }
+
+.footer p{
+  font-size: x-large;
+}
+
+.form-popup{
+  background-color:rgb(34, 34, 34);
+  color: whitesmoke;
+  display:none;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    *{
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    
+    body {
+      background: transparent;
+      background-image: url("../img/words-of-radiance-cover-phone.jpg") ;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .book-space {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    
+    .book-body{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .book-title p{
+      margin-top: 5%;
+      font-size: 50px;
+    }
+    
+    .book-portrait{
+      margin-left: 0%;
+      flex-direction: row;
+      align-content: center;
+      align-self: center;
+    }
+    
+    .book-portrait img{
+      max-height: 250px;
+      align-content: center;
+      align-self: center;
+    }
+    
+    .book-description{
+      flex-wrap: wrap;
+      font-size: 30px;
+      margin-right: 3%;
+      margin-left: 3%;
+      margin-bottom: 5%;
+      text-align: center;
+    }
+}
+
