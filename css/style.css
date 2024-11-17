@@ -592,3 +592,33 @@ body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 }
+
+/* Extra-Large devices (1600px and up) */
+@media only screen and (min-width: 1500px) {
+  .author-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .author-portrait {
+    margin-right: 5%;
+    margin-left: 10%;
+    box-shadow: 0 0 100px #000000;
+  }
+
+  .author-description {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 10%;
+    max-width: 60%;
+  }
+
+  .author-description p {
+    word-wrap: break-word;
+  }
+}

@@ -11,7 +11,11 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/style-wb.css">
+  <script src="js/validate-form.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/comments.js"></script>
+
+  <meta name="viewport" content="width=1000">
 </head>
 
 <body>
@@ -50,7 +54,7 @@
   </div>
 
   <div class="book-space">
-    <div class="book-title">
+    <div class="book-title" id="parallax">
       <p>Weekly Book Recommendation</p>
     </div>
     <div class="book-body">
@@ -79,6 +83,65 @@
     </div>
   </div>
 
+  <div class="forum" id="forum">
+    <div class="forum-post">
+      <div class="post-avatar">
+        <img src="img/avatar.png" alt="Avatar">
+      </div>
+      <div class="post-content">
+        <div class="post-username" id="forum-username">
+          <h1>User USERNAME</h1>
+        </div>
+        <div class="post-comment" id="forum-comment">
+          <p>This is one of my favorite books! Great review!</p>
+        </div>
+        <div class="post-date" id="forum-date">14 Nov. 2024</div>
+      </div>
+    </div>
+
+    <div class="forum-post">
+      <div class="post-avatar">
+        <img src="img/avatar.png" alt="Avatar">
+      </div>
+      <div class="post-content">
+        <div class="post-username">
+          <h1>Tiburcio ProfedeLND</h1>
+        </div>
+        <div class="post-comment">
+          <p>I really like this webpage! You should get a 10! :)</p>
+        </div>
+        <div class="post-date">15 Nov. 2024</div>
+      </div>
+    </div>
+
+    <div class="comment-button">
+      <button onclick="showCommentForm()">Add a comment</button>
+    </div>
+  </div>
+
+
+  <div id="add-comment" class="add-comment">
+    <div class="item">
+      <form id="comment-form">
+        <label for="new-username">Username:</label>
+        <input type="text" id="new-username" name="username" required>
+        <span id="form-username" >* username is required.</span>
+  
+        <label for="new-email">Email:</label>
+        <input type="email" id="new-email" name="email">
+  
+        <label for="new-comment">Comment:</label>
+        <textarea id="new-comment" name="comment" required></textarea>
+        <span id="form-comment" >* please enter a comment.</span>
+  
+        <div class="form-submit">
+          <button type="submit">Submit</button>
+          <button type="button" onclick="closeCommentForm()">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div class="footer">
 
     <div class="form-popup" id="contactForm">
@@ -93,13 +156,9 @@
       <form action="/action_page.php" class="form-container">
         <label><b>Sign up to our Newsletter!</b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
-
-
-        <button type="submit" class="btn">Login</button>
         <button type="button" class="btn cancel" onclick="closeNewsletter()">Close</button>
       </form>
     </div>
-
 
     <p class="contact-us" id="contact" onclick="openContact()"> Contact us!</p>
     <p class="news-letter" id="newsletter" onclick="openNewsletter()"> Sign up to our newsletter!</p>

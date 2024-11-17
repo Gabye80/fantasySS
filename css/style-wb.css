@@ -26,7 +26,7 @@
 
 .book-body {
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
 }
 
 .book-portrait {
@@ -43,7 +43,7 @@
 .book-description {
   display: flex;
   font-size: large;
-  flex: wrap;
+  flex-wrap: wrap;
   font-size: 50px;
   margin-left: 5%;
   margin-right: 20%;
@@ -57,13 +57,10 @@
   padding: 100px;
   text-align: center;
   color: white;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-.contact-us {
-  cursor: pointer;
-}
-
+.contact-us,
 .news-letter {
   cursor: pointer;
 }
@@ -85,6 +82,241 @@
 .form-popup {
   background-color: rgb(34, 34, 34);
   color: whitesmoke;
+  display: none;
+}
+
+.forum {
+  background-color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.forum-post {
+  display: flex;
+  position: relative;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.post-avatar {
+  display: flex;
+  margin-right: 2%;
+}
+
+.post-avatar img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.post-username {
+  margin-left: 1%;
+}
+
+.post-comment {
+  margin-right: 40%;
+  background-color: whitesmoke;
+  border-style: groove;
+  border-width: 1px;
+  border-color: rgba(120, 120, 120, 0.25);
+}
+
+.post-comment p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+.post-date {
+  margin-top: 5px;
+  justify-self: flex-start;
+}
+
+.post-content {
+  flex-wrap: wrap;
+}
+
+#add-comment {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 10%;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: column;
+  justify-content: center;
+  align-items: flex-start;
+  visibility: hidden;
+}
+
+.item {
+  background-color: aliceblue;
+  margin-top: 8em;
+  padding: 1em;
+  padding-inline: 3em;
+  border: 2px black solid;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#comment-form > span {
+  display: block;
+}
+
+#comment-form > input {
+  margin-top: 0.1em;
+  height: 1.5em;
+  width: 100%;
+}
+
+#comment-form > label {
+  margin: 0.5em 0;
+  width: 100%;
+}
+
+#comment-form > textarea {
+  width: 100%;
+  height: 20%;
+}
+
+#form-username,
+#form-comment {
+  visibility: hidden;
+  color: red;
+  font-size: 0.9em;
+  margin-top: 0.2em;
+}
+
+.form-submit {
+  width: 100%;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.form-submit > button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+.comment-button {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.comment-button button {
+  background: linear-gradient(to right, #239673, #0892d1);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 10px 10px 3px 0px rgba(0, 0, 0, 0.50);
+}
+
+.comment-button button:hover {
+  background: linear-gradient(to right, #0892d1, #239673);
+  transform: scale(1.05);
+}
+
+#forum {
+  background-color: #cff8f842;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.forum-post {
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-right: 20%;
+  padding: 15px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.20);
+  transition: all 0.3s ease;
+}
+
+.forum-post:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-5px);
+}
+
+.post-username h1 {
+  font-weight: bold;
+  color: #333333;
+}
+
+
+.post-date {
+  font-size: 12px;
+  color: #999999;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.add-comment {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#comment-form label {
+  margin: 10px 0 5px;
+}
+
+#comment-form input,
+#comment-form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#comment-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2575fc;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#comment-form button:hover {
+  background-color: #6a11cb;
+}
+
+#form-username,
+#form-comment {
+  font-size: 12px;
+  color: red;
   display: none;
 }
 
@@ -141,6 +373,31 @@
     margin-bottom: 5%;
     text-align: center;
   }
+
+  .forum-post{
+    margin-right: 5%;
+  }
+
+  #forum {
+    font-size: 0.75em;
+  }
+
+  .post-comment {
+    width: 100%;
+  }
+
+  .post-comment p {
+    font-size: 1em;
+  }
+
+  #comment-form > textarea {
+    width: 100%;
+    height: 20%;
+  }
+
+  .post-date{
+    font-size: 1em;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -180,9 +437,30 @@
     font-size: 30px;
     margin-right: 3%;
     margin-left: 3%;
-    margin-bottom: 5%;
     text-align: center;
   }
+
+  .forum-post{
+    margin-right: 5%;
+  }
+
+  #forum {
+    font-size: 1.25em;
+  }
+
+  .post-comment {
+    margin-right: 15%;
+
+  }
+
+  .post-comment p {
+    font-size: 1.5em;
+  }
+
+  .post-date{
+    font-size: 1em;
+  }
+  
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -190,7 +468,7 @@
   body {
     background: transparent;
     background-image: url("../img/words-of-radiance-cover.jpg");
-    background-size: 205%;
+    background-size: 375%;
   }
 
   .book-space {
@@ -231,7 +509,82 @@
     margin-bottom: 5%;
     text-align: center;
   }
+  
 }
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  /* (You can add more specific styles for larger screens if needed) */
+
+  
+  .forum-post{
+    margin-right: 5%;
+  }
+
+  #forum {
+    font-size: 1.5em;
+  }
+
+  .post-comment {
+    margin-right: 5%;
+  }
+
+  .post-comment p {
+    font-size: 1.5em;
+  }
+
+  .post-date{
+    font-size: 1.5em;
+  }
+}
+
+/* Extra-Large devices (1600px and up) */
+@media only screen and (min-width: 1500px) {
+  .book-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .book-portrait {
+    margin-right: 5%;
+    margin-left: 10%;
+    box-shadow: 0 0 100px #000000;
+  }
+
+  .book-description {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 30px;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 10%;
+    max-width: 60%;
+  }
+
+  .book-description p {
+    word-wrap: break-word;
+  }
+
+  .forum-post{
+    margin-right: 5%;
+  }
+
+  #forum {
+    font-size: 1em;
+  }
+
+  .post-comment {
+    margin-right: 5%;
+    width: 150%;
+  }
+
+  .post-comment p {
+    font-size: 1em;
+  }
+
+  .post-date{
+    font-size: 1em;
+  }
 }

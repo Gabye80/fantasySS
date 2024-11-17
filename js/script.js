@@ -68,3 +68,4 @@ function openNewsletter() {
 function closeNewsletter() {
   document.getElementById("newsletterForm").style.display = "none";
 }
+  
