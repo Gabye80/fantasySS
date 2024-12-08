@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/style-wb.css">
+
   <script src="js/validate-form.js"></script>
   <script src="js/script.js"></script>
   <script src="js/comments.js"></script>
@@ -84,9 +85,11 @@
   </div>
 
   <div class="forum" id="forum">
+
     <div class="forum-post">
+      <div class="post-id" id="post-id">1</div>
       <div class="post-avatar">
-        <img src="img/avatar.png" alt="Avatar">
+        <img src="img/avatar1.png" alt="Avatar">
       </div>
       <div class="post-content">
         <div class="post-username" id="forum-username">
@@ -100,8 +103,9 @@
     </div>
 
     <div class="forum-post">
+      <div class="post-id" id="post-id">2</div>
       <div class="post-avatar">
-        <img src="img/avatar.png" alt="Avatar">
+        <img src="img/avatar1.png" alt="Avatar">
       </div>
       <div class="post-content">
         <div class="post-username">
@@ -111,59 +115,98 @@
           <p>I really like this webpage! You should get a 10! :)</p>
         </div>
         <div class="post-date">15 Nov. 2024</div>
-      </div>
-    </div>
 
-    <div class="comment-button">
-      <button onclick="showCommentForm()">Add a comment</button>
+      </div>
     </div>
   </div>
 
+  <div class="comment-button">
+    <button onclick="showCommentForm()">Add a comment</button>
+  </div>
 
   <div id="add-comment" class="add-comment">
     <div class="item">
       <form id="comment-form">
         <label for="new-username">Username:</label>
-        <input type="text" id="new-username" name="username" required>
-        <span id="form-username" >* username is required.</span>
-  
+        <input type="text" id="new-username" name="username">
+        <span id="form-username">* username is required.</span>
+
         <label for="new-email">Email:</label>
-        <input type="email" id="new-email" name="email">
-  
+        <input type="text" id="new-email" name="email">
+        <span id="form-email">* please enter an email.</span>
+
         <label for="new-comment">Comment:</label>
-        <textarea id="new-comment" name="comment" required></textarea>
-        <span id="form-comment" >* please enter a comment.</span>
-  
+        <textarea id="new-comment" name="comment"></textarea>
+        <span id="form-comment">* please enter a comment.</span>
+
+        <div class="select-avatar">
+          <p>Select an avatar:</p>
+          <img src="img/avatar1.png" onclick="selectAvatar(this)" class="unselected-avatar">
+          <img src="img/avatar2.png" onclick="selectAvatar(this)" class="unselected-avatar">
+          <img src="img/avatar3.png" onclick="selectAvatar(this)" class="unselected-avatar">
+          <div class="avatar-checkbox">
+            <input type="checkbox" id="avatar1">
+            <input type="checkbox" id="avatar2">
+            <input type="checkbox" id="avatar3">
+          </div>
+          <span id="form-avatar">* select one avatar </span>
+        </div>
+
         <div class="form-submit">
-          <button type="submit">Submit</button>
+          <button type="button" onclick="validatePersonalDataForm()">Submit</button>
           <button type="button" onclick="closeCommentForm()">Close</button>
         </div>
       </form>
     </div>
   </div>
 
-  <div class="footer">
-
-    <div class="form-popup" id="contactForm">
-      <form action="/action_page.php" class="form-container">
-
-        <h1>Don't contact us please</h1>
-        <button type="button" class="btn cancel" onclick="closeContact()">Close</button>
-      </form>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>FantasySS by @Gabye80</p>
+        <br>
+        <p>- "The books I read are... Fantastic."</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="https://github.com/Gabye80">● Github</a></li>
+          <li><a href="https://www.brandonsanderson.com/">● Brandon Sanderson's Page</a></li>
+        </ul>
+      </div>
+      <div class="social-links">
+        <a href="https://youtube.com/">● Youtube</a>
+        <a href="https://twitter.com/">● Twitter</a>
+        <a href="https://youtu.be/zL19uMsnpSU">● ???</a>
+      </div>
     </div>
+    
+  </footer>
 
-    <div class="form-popup" id="newsletterForm">
-      <form action="/action_page.php" class="form-container">
-        <label><b>Sign up to our Newsletter!</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
-        <button type="button" class="btn cancel" onclick="closeNewsletter()">Close</button>
-      </form>
-    </div>
-
-    <p class="contact-us" id="contact" onclick="openContact()"> Contact us!</p>
-    <p class="news-letter" id="newsletter" onclick="openNewsletter()"> Sign up to our newsletter!</p>
-    <p> Copyright 2024 @Gabye80</p>
-  </div>
 </body>
 
 </html>
+
+
+
+<!-- <div class="footer">
+
+  <div class="form-popup" id="contactForm">
+    <form action="/action_page.php" class="form-container">
+
+      <h1>Don't contact us please</h1>
+      <button type="button" class="btn cancel" onclick="closeContact()">Close</button>
+    </form>
+  </div>
+
+  <div class="form-popup" id="newsletterForm">
+    <form action="/action_page.php" class="form-container">
+      <label><b>Sign up to our Newsletter!</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <button type="button" class="btn cancel" onclick="closeNewsletter()">Close</button>
+    </form>
+  </div>
+
+  <p class="contact-us" id="contact" onclick="openContact()"> Contact us!</p>
+  <p class="news-letter" id="newsletter" onclick="openNewsletter()"> Sign up to our newsletter!</p>
+  <p> Copyright 2024 @Gabye80</p>
+</div> -->

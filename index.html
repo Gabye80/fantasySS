@@ -10,8 +10,7 @@
   <title>FantasySS</title>
 
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js"></script>
-  
+
   <meta name="viewport" content="width=1000">
 </head>
 
@@ -71,10 +70,47 @@
     </div>
   </div>
 
+  <div id="cursor-container" class="cursor-container" onclick="showMenu()">
+    <img src="img/container-button.png" alt="icono">
+  </div>
+
+  <section id="side-menu" class="side-menu">
+<p>The Way of Kings</p>
+<img src="img/wok-cover.jpg" alt="The Way of Kings">
+
+<p>Words of Radiance</p>
+<img src="img/sa-2.jpg" alt="Words of Radiance">
+
+<p>Oathbringer</p>
+<img src="img/sa-3.jpg" alt="Oathbringer">
+
+<p>Rythm of War</p>
+<img src="img/sa-4.jpg" alt="Rythm of War">
+
+<p>Wind and Truth</p>
+<img src="img/sa-5.jpg" alt="Wind and Truth">
+
+<p>The Final Empire</p>
+<img src="img/mistborn-cover.jpg" alt="The Final Empire">
+
+<p>The Well of Ascension</p>
+<img src="img/mb-2.jpg" alt="The Well of Ascension">
+
+<p>The Hero of Ages</p>
+<img src="img/mb3.jpg" alt="The Hero of Ages">
+
+<p>Elantris</p>
+<img src="img/elantris-cover.jpg" alt="Elantris">
+
+<p>Warbreaker</p>
+<img src="img/warbreaker.jpg" alt="Warbreaker">
+
+  </section>
+
   <div class="title-selector" id="selector">
     <p>Author's Work</p>
   </div>
-  <div class="series-selector">
+  <div class="series-selector" id="series-selector" onloadstart="appearifySelector()">
 
     <div class="stormlight-selector">
       <img src="img/wok-cover.jpg" alt="Stormlight Archive" onclick="hideStormlight()">
@@ -189,36 +225,30 @@
   </div>
 
 
-  <!-- Cannot add a good looking Carousel without using Bootstrap or frameworks, will leave it for the next prototype xD
-<div class="author-books-carousel"> </div> -->
-
-
-  <div class="footer">
-
-    <div class="form-popup" id="contactForm">
-      <form action="/action_page.php" class="form-container">
-
-        <h1>Don't contact us please</h1>
-        <button type="button" class="btn cancel" onclick="closeContact()">Close</button>
-      </form>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>FantasySS by @Gabye80</p>
+        <br>
+        <p>- "The books I read are... Fantastic."</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="https://github.com/Gabye80">● Github</a></li>
+          <li><a href="https://www.brandonsanderson.com/">● Brandon Sanderson's Page</a></li>
+        </ul>
+      </div>
+      <div class="social-links">
+        <a href="https://youtube.com/">● Youtube</a>
+        <a href="https://twitter.com/">● Twitter</a>
+        <a href="https://youtu.be/zL19uMsnpSU">● ???</a>
+      </div>
     </div>
+    
+  </footer>
 
-    <div class="form-popup" id="newsletterForm">
-      <form action="/action_page.php" class="form-container">
-        <label><b>Sign up to our Newsletter!</b></label>
-        <input type="text" placeholder="Enter Email" name="email" required>
-
-
-        <button type="submit" class="btn">Login</button>
-        <button type="button" class="btn cancel" onclick="closeNewsletter()">Close</button>
-      </form>
-    </div>
-
-
-    <p class="contact-us" id="contact" onclick="openContact()"> Contact us!</p>
-    <p class="news-letter" id="newsletter" onclick="openNewsletter()"> Sign up to our newsletter!</p>
-    <p> Copyright 2024 @Gabye80</p>
-  </div>
+  <script src="js/script.js"></script>
+  <script src="js/side-menu.js"></script>
 
 </body>
 
